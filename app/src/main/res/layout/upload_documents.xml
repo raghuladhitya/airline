@@ -30,17 +30,18 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/mandatory"
+                android:layout_toLeftOf="@id/mandatory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/Heading"
-                android:text="*"
+                android:text=" *"
                 android:textColor="@color/RedColor" />
 
             <EditText
-                android:layout_width="match_parent"
+                android:id="@+id/mandatory"
+                android:hint="  PassPort Number"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_toRightOf="@id/mandatory"
+                android:layout_alignParentRight="true"
                 android:background="#FFFFFF" />
         </RelativeLayout>
 

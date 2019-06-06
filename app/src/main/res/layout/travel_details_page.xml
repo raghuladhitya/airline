@@ -68,7 +68,9 @@
                 </LinearLayout>
 
                 <EditText
+                    android:id="@+id/origin_city"
                     android:layout_width="match_parent"
+                    android:maxLines="1"
                     android:layout_height="wrap_content" />
             </LinearLayout>
 
@@ -99,6 +101,7 @@
 
                 <EditText
                     android:id="@+id/Edit_airline1"
+                    android:maxLines="2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -131,7 +134,8 @@
                 <EditText
                     android:id="@+id/edit_flightno1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"/>
             </LinearLayout>
 
             <LinearLayout
@@ -166,9 +170,10 @@
                     </LinearLayout>
 
                     <EditText
-
+                        android:id="@+id/arrival_date"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"/>
                 </LinearLayout>
 
 
@@ -199,6 +204,8 @@
                     </LinearLayout>
 
                     <EditText
+                        android:id="@+id/PNR_code"
+                        android:maxLines="1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
@@ -243,6 +250,7 @@
                     </LinearLayout>
 
                     <EditText
+                        android:id="@+id/Destination_city"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
@@ -341,6 +349,7 @@
                         </LinearLayout>
 
                         <EditText
+                            android:id="@+id/Departure_date"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
                     </LinearLayout>
@@ -373,6 +382,7 @@
                         </LinearLayout>
 
                         <EditText
+                            android:id="@+id/PNR_code2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
                     </LinearLayout>
@@ -380,6 +390,7 @@
             </LinearLayout>
 
             <Button
+                android:id="@+id/Proceed_Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

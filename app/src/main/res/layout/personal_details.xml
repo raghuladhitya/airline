@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -54,15 +55,20 @@
 
                     </LinearLayout>
 
-                    <com.reginald.editspinner.EditSpinner
-                        android:id="@+id/edit_spinner1"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Mr."
-                        app:dropDownDrawable="@drawable/ic_arrow_drop_down_black_24dp"
-                        app:dropDownDrawableHeight="25dp"
-                        app:dropDownDrawableSpacing="15dp"
-                        app:dropDownDrawableWidth="25dp" />
+                        android:orientation="horizontal">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/title"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:editable="true"
+                            android:hint="Mr."
+                            tools:ignore="Deprecated" />
+
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 
@@ -91,6 +97,7 @@
                 </LinearLayout>
 
                 <EditText
+                    android:id="@+id/FirstName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -116,7 +123,7 @@
                     android:textSize="18sp" />
 
                 <EditText
-
+                    android:id="@+id/MiddleName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -149,6 +156,7 @@
                 </LinearLayout>
 
                 <EditText
+                    android:id="@+id/LastName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -191,14 +199,16 @@
                     android:orientation="horizontal">
 
                     <RadioButton
+                        android:id="@+id/chooseMale"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Male "/>
+                        android:text="Male " />
 
                     <RadioButton
+                        android:id="@+id/chooseFemale"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Female "/>
+                        android:text="Female " />
                 </RadioGroup>
             </LinearLayout>
 
@@ -230,11 +240,13 @@
                 </LinearLayout>
 
                 <EditText
+                    android:id="@+id/DateofBirth"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -265,15 +277,20 @@
                         android:textColor="@color/RedColor" />
 
                 </LinearLayout>
-                <com.reginald.editspinner.EditSpinner
-                    android:id="@+id/Country_birth"
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="India "
-                    app:dropDownDrawable="@drawable/ic_arrow_drop_down_black_24dp"
-                    app:dropDownDrawableHeight="25dp"
-                    app:dropDownDrawableSpacing="15dp"
-                    app:dropDownDrawableWidth="25dp" />
+                    android:layout_height="wrap_content">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/CountryofBirth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="true"
+                        android:hint="India "
+                        tools:ignore="Deprecated" />
+
+                </LinearLayout>
             </LinearLayout>
 
 
@@ -302,17 +319,18 @@
                         android:textColor="@color/RedColor" />
 
                 </LinearLayout>
-                <com.reginald.editspinner.EditSpinner
-                    android:id="@+id/City_birth"
+
+                <AutoCompleteTextView
+                    android:id="@+id/CityofBirth"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="-Select- "
-                    app:dropDownDrawable="@drawable/ic_arrow_drop_down_black_24dp"
-                    app:dropDownDrawableHeight="25dp"
-                    app:dropDownDrawableSpacing="15dp"
-                    app:dropDownDrawableWidth="25dp" />
+                    android:editable="true"
+                    tools:ignore="Deprecated"/>
+
+
             </LinearLayout>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -343,15 +361,14 @@
                         android:textColor="@color/RedColor" />
 
                 </LinearLayout>
-                <com.reginald.editspinner.EditSpinner
-                    android:id="@+id/-Select-"
+
+                <AutoCompleteTextView
+                    android:id="@+id/MartialStatus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="-Select- "
-                    app:dropDownDrawable="@drawable/ic_arrow_drop_down_black_24dp"
-                    app:dropDownDrawableHeight="25dp"
-                    app:dropDownDrawableSpacing="15dp"
-                    app:dropDownDrawableWidth="25dp" />
+                    android:editable="true"
+                    android:hint="Single"
+                    tools:ignore="Deprecated" />
             </LinearLayout>
 
 
@@ -382,10 +399,12 @@
                 </LinearLayout>
 
                 <EditText
+                    android:id="@+id/Profession_Designation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -418,7 +437,7 @@
                 </LinearLayout>
 
                 <EditText
-
+                    android:id="@+id/Religion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -430,18 +449,20 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Edu. qualification "
-                        android:textColor="#000000"
-                        android:textSize="18sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edu. qualification "
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
 
                 <EditText
+                    android:id="@+id/Education_Qualification"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -453,15 +474,15 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="User Ref No"
-                        android:textColor="#000000"
-                        android:textSize="18sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User Ref No"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
 
                 <EditText
-
+                    android:id="@+id/UserrefNo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -492,17 +513,16 @@
 
                 </LinearLayout>
 
-                <com.reginald.editspinner.EditSpinner
+                <AutoCompleteTextView
                     android:id="@+id/Nationality"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:editable="true"
                     android:hint="Indian"
-                    app:dropDownDrawable="@drawable/ic_arrow_drop_down_black_24dp"
-                    app:dropDownDrawableHeight="25dp"
-                    app:dropDownDrawableSpacing="15dp"
-                    app:dropDownDrawableWidth="25dp" />
+                    tools:ignore="Deprecated" />
             </LinearLayout>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -522,7 +542,7 @@
                     android:textSize="18sp" />
 
                 <EditText
-
+                    android:id="@+id/Prenationality"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -554,6 +574,7 @@
                 </LinearLayout>
 
                 <EditText
+                    android:id="@+id/PanCardNo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>

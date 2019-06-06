@@ -1,3 +1,54 @@
 <resources>
     <string name="app_name">MyApplication</string>
+    <string-array name="title">
+
+        <item>Mr.</item>
+        <item>Mrs.</item>
+
+    </string-array>
+
+    <string-array name="VisaVisa">
+
+        <item>studying</item>
+        <item>visiting</item>
+        <item>work</item>
+        <item>business</item>
+        <item>tourism</item>
+
+    </string-array>
+    <string-array name="BirthCountry">
+
+        <item>India</item>
+        <item>Australia</item>
+        <item>Bangladesh</item>
+        <item>Afganisthan</item>
+
+    </string-array>
+
+    <string-array name="BirthCity">
+
+        <item>chennai</item>
+        <item>coimbatore</item>
+        <item>madurai</item>
+        <item>Trichy</item>
+
+    </string-array>
+
+    <string-array name="Status">
+
+        <item>single</item>
+        <item>married</item>
+        <item>separated</item>
+        <item>divorced</item>
+        <item>widowed</item>
+
+    </string-array>
+
+    <string-array name="Citizen_country">
+
+        <item>Indian</item>
+        <item>Australian</item>
+        <item>Pakisthanian</item>
+
+    </string-array>
 </resources>
