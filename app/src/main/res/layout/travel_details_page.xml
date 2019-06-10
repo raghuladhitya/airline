@@ -17,6 +17,7 @@
             android:background="@color/colorPrimaryDark">
 
             <TextView
+                android:id="@+id/travel_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -48,30 +49,19 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/origincity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Origin City"
-                        android:textColor="#000000"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" *"
-                        android:textColor="@color/RedColor" />
-                </LinearLayout>
+                    android:text="Origin City"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
 
                 <EditText
                     android:id="@+id/origin_city"
                     android:layout_width="match_parent"
-                    android:maxLines="1"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:maxLines="1" />
             </LinearLayout>
 
             <LinearLayout
@@ -79,31 +69,19 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/airlinename"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Airline Name "
-                        android:textColor="#000000"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" *"
-                        android:textColor="@color/RedColor" />
-
-                </LinearLayout>
+                    android:text="Airline Name "
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
 
                 <EditText
                     android:id="@+id/Edit_airline1"
-                    android:maxLines="2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:maxLines="2" />
             </LinearLayout>
 
             <LinearLayout
@@ -111,31 +89,19 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/flightno1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Flight No"
-                        android:textColor="#000000"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" *"
-                        android:textColor="@color/RedColor" />
-
-                </LinearLayout>
+                    android:text="Flight No"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
 
                 <EditText
                     android:id="@+id/edit_flightno1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLines="1"/>
+                    android:maxLines="1" />
             </LinearLayout>
 
             <LinearLayout
@@ -149,31 +115,19 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <LinearLayout
+                    <TextView
+                        android:id="@+id/arrivaldate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Arrival date "
-                            android:textColor="#000000"
-                            android:textSize="18sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=" *"
-                            android:textColor="@color/RedColor" />
-
-                    </LinearLayout>
+                        android:text="Arrival date "
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
 
                     <EditText
                         android:id="@+id/arrival_date"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:maxLines="1"/>
+                        android:maxLines="1" />
                 </LinearLayout>
 
 
@@ -183,38 +137,25 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <LinearLayout
+                    <TextView
+                        android:id="@+id/PNR1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="PNR "
-                            android:textColor="#000000"
-                            android:textSize="18sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=" *"
-                            android:textColor="@color/RedColor" />
-
-                    </LinearLayout>
+                        android:text="PNR "
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
 
                     <EditText
-                        android:id="@+id/PNR_code"
-                        android:maxLines="1"
+                        android:id="@+id/PNR_code1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:maxLines="1" />
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:orientation="vertical">
 
                 <TextView
@@ -230,24 +171,15 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <LinearLayout
+
+                    <TextView
+                        android:id="@+id/destinationcity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:text="Destination City "
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Destination City "
-                            android:textColor="#000000"
-                            android:textSize="18sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=" *"
-                            android:textColor="@color/RedColor" />
-                    </LinearLayout>
 
                     <EditText
                         android:id="@+id/Destination_city"
@@ -260,25 +192,15 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <LinearLayout
+
+                    <TextView
+                        android:id="@+id/airlinename2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:text="Airline Name "
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Airline Name "
-                            android:textColor="#000000"
-                            android:textSize="18sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=" *"
-                            android:textColor="@color/RedColor" />
-
-                    </LinearLayout>
 
                     <EditText
                         android:id="@+id/Edit_airline2"
@@ -291,25 +213,15 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <LinearLayout
+
+                    <TextView
+                        android:id="@+id/flightno2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:text="Flight No"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Flight No"
-                            android:textColor="#000000"
-                            android:textSize="18sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text=" *"
-                            android:textColor="@color/RedColor" />
-
-                    </LinearLayout>
 
                     <EditText
                         android:id="@+id/edit_flightno2"
@@ -328,25 +240,13 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/departuredate"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Departure Date "
-                                android:textColor="#000000"
-                                android:textSize="18sp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text=" *"
-                                android:textColor="@color/RedColor" />
-
-                        </LinearLayout>
+                            android:text="Departure Date "
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
 
                         <EditText
                             android:id="@+id/Departure_date"
@@ -361,25 +261,14 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/PNR2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:text="PNR "
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="PNR "
-                                android:textColor="#000000"
-                                android:textSize="18sp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text=" *"
-                                android:textColor="@color/RedColor" />
-
-                        </LinearLayout>
 
                         <EditText
                             android:id="@+id/PNR_code2"

@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_centerInParent="true"
-                android:layout_marginLeft="12dp"
+                android:layout_marginLeft="@dimen/MarginAlign"
                 android:background="@color/colorPrimaryDark"
                 android:text="General Information"
                 android:textColor="#FFFFFF" />
@@ -60,8 +60,8 @@
                     android:textSize="18sp" />
 
 
-                <AutoCompleteTextView
-                    android:id="@+id/edit_spinner1"
+                <Spinner
+                    android:id="@+id/VisaTypeET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="E-Visa Type" />
@@ -80,8 +80,8 @@
                     android:textColor="#000000"
                     android:textSize="18sp" />
 
-                <AutoCompleteTextView
-                    android:id="@+id/edit_spinner2"
+                <Spinner
+                    android:id="@+id/CountryET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="United Arab Emirates" />
@@ -108,8 +108,8 @@
 
                 </LinearLayout>
 
-                <AutoCompleteTextView
-                    android:id="@+id/edit_spinner3"
+                <Spinner
+                    android:id="@+id/VisaCategoryET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="96 Hours Transit Visa" />
@@ -129,8 +129,8 @@
                     android:textSize="18sp" />
 
 
-                <AutoCompleteTextView
-                    android:id="@+id/edit_spinner4"
+                <Spinner
+                    android:id="@+id/PurposeofVisitET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Transit" />
@@ -150,8 +150,8 @@
                     android:textColor="#000000"
                     android:textSize="18sp" />
 
-                <AutoCompleteTextView
-                    android:id="@+id/edit_spinner5"
+                <Spinner
+                    android:id="@+id/ProcessPriorityET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Normal" />
@@ -173,8 +173,8 @@
                     android:textSize="18sp" />
 
 
-                <AutoCompleteTextView
-                    android:id="@+id/edit_spinner6"
+                <Spinner
+                    android:id="@+id/NationalityET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="India" />
@@ -196,8 +196,8 @@
                     android:textSize="18sp" />
 
 
-                <AutoCompleteTextView
-                    android:id="@+id/edit_spinner7"
+                <Spinner
+                    android:id="@+id/NoofApplicantsET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="India" />
@@ -207,9 +207,9 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginRight="12dp"
+            android:layout_marginLeft="@dimen/MarginAlign"
+            android:layout_marginTop="@dimen/MarginAlign"
+            android:layout_marginRight="@dimen/MarginAlign"
             android:background="@color/colorPrimaryDark">
 
             <TextView
@@ -223,24 +223,30 @@
                 android:text="Travel Details"
                 android:textColor="#FFFFFF" />
 
-            <CheckBox
+            <RadioGroup
                 android:id="@+id/checkbox1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/travel_details"
-                android:text="Not Decided"
-                android:textColor="#FFFFFF" />
+                android:orientation="horizontal">
 
-            <CheckBox
-                android:id="@+id/checkbox2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/checkbox1"
-                android:text="Decided"
-                android:textColor="#FFFFFF" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Decided"
+                    android:textColor="@color/WhiteColor"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not Decided"
+                    android:textColor="@color/WhiteColor"/>
+
+            </RadioGroup>
         </RelativeLayout>
 
         <Button
+            android:id="@+id/Proceed_Button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

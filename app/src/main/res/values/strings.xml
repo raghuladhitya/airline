@@ -1,11 +1,61 @@
 <resources>
     <string name="app_name">MyApplication</string>
-    <string-array name="title">
 
-        <item>Mr.</item>
-        <item>Mrs.</item>
+    <!-- This is for the General Information XML page For Choosing The Type of Visa and The Country-->
+    <string-array name="VisaType">
+
+        <item>-Select-</item>
+        <item>E-Visa Country</item>
+        <item>Offline Country</item>
 
     </string-array>
+
+    <string-array name="Country1">
+
+        <item>Armenia</item>
+        <item>Bahrain</item>
+        <item>Hong Kong</item>
+
+    </string-array>
+
+    <string-array name="purposeofvisit">
+
+        <item>Denmark</item>
+        <item>FRANCE</item>
+        <item>Malasyia</item>
+
+    </string-array>
+
+    <string-array name="VisaCategory">
+
+        <item>Tourist</item>
+        <item>Business</item>
+
+    </string-array>
+
+
+    <string-array name="ProcessPriority">
+
+        <item>-Select-</item>
+        <item>Normal</item>
+
+    </string-array>
+
+    <string-array name="Nationality">
+
+        <item>-Select-</item>
+        <item>Indian</item>
+        <item>others</item>
+
+    </string-array>
+
+    <string-array name="noofApplicants">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <!-- End of the General Information Page -->
 
     <string-array name="VisaVisa">
 
@@ -49,6 +99,14 @@
         <item>Indian</item>
         <item>Australian</item>
         <item>Pakisthanian</item>
+
+    </string-array>
+
+    <string-array name="title">
+
+        <item>-Select-</item>
+        <item>Mr.</item>
+        <item>Mrs.</item>
 
     </string-array>
 </resources>
