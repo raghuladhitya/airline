@@ -12,6 +12,7 @@
 
     <string-array name="Country1">
 
+        <item>-Select-</item>
         <item>Armenia</item>
         <item>Bahrain</item>
         <item>Hong Kong</item>
@@ -20,6 +21,7 @@
 
     <string-array name="purposeofvisit">
 
+        <item>-Select-</item>
         <item>Denmark</item>
         <item>FRANCE</item>
         <item>Malasyia</item>
@@ -28,6 +30,7 @@
 
     <string-array name="VisaCategory">
 
+        <item>-Select-</item>
         <item>Tourist</item>
         <item>Business</item>
 
@@ -50,6 +53,7 @@
     </string-array>
 
     <string-array name="noofApplicants">
+        <item>-Select-</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -59,6 +63,7 @@
 
     <string-array name="VisaVisa">
 
+        <item>-Select-</item>
         <item>studying</item>
         <item>visiting</item>
         <item>work</item>
@@ -68,6 +73,7 @@
     </string-array>
     <string-array name="BirthCountry">
 
+        <item>-Select-</item>
         <item>India</item>
         <item>Australia</item>
         <item>Bangladesh</item>
@@ -77,6 +83,7 @@
 
     <string-array name="BirthCity">
 
+        <item>-Select-</item>
         <item>chennai</item>
         <item>coimbatore</item>
         <item>madurai</item>
@@ -86,6 +93,7 @@
 
     <string-array name="Status">
 
+        <item>-Select-</item>
         <item>single</item>
         <item>married</item>
         <item>separated</item>
@@ -96,6 +104,7 @@
 
     <string-array name="Citizen_country">
 
+        <item>-Select-</item>
         <item>Indian</item>
         <item>Australian</item>
         <item>Pakisthanian</item>
@@ -111,7 +120,8 @@
     </string-array>
 
     <string-array name="gender">
-        <item>-Choose-</item>
+
+        <item>-Select-</item>
         <item>Male</item>
         <item>Female</item>
         <item>others</item>

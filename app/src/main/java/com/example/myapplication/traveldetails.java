@@ -75,10 +75,11 @@ public class traveldetails extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!origincity.isEmpty() && !airlineName1.isEmpty() && !flightNo1.isEmpty() &&
-                        !arrDate.isEmpty() && !pnr1.isEmpty() && !destinationcity.isEmpty() &&
-                        !airlineName2.isEmpty() && !flightNo2.isEmpty() && !departuredate.isEmpty() &&
-                        !pnr2.isEmpty()) {
+                if (!OriginCity.getEditText().getText().toString().isEmpty() && !AirlineName1.getEditText().getText().toString().isEmpty()
+                        && !FlightNo1.getEditText().getText().toString().isEmpty() && !ArrDate.getEditText().getText().toString().isEmpty()
+                        && !PNR1.getEditText().getText().toString().isEmpty() && !DestinationCity.getEditText().getText().toString().isEmpty()
+                        && !AirlineName2.getEditText().getText().toString().isEmpty() && !FlightNo2.getEditText().getText().toString().isEmpty()
+                        && !DepartureDate.getEditText().getText().toString().isEmpty() && !PNR2.getEditText().getText().toString().isEmpty()) {
                     getFragmentManager().beginTransaction().replace(R.id.Fragment_container, new uploadDocuments()).addToBackStack(null).commit();
                 }
             }

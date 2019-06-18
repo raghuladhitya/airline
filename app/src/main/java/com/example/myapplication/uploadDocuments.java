@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class uploadDocuments  extends Fragment {
+public class uploadDocuments extends Fragment {
     View mView;
     @Nullable
     @Override
