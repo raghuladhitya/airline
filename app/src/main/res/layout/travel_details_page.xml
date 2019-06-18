@@ -44,118 +44,129 @@
                 android:textColor="@color/RedColor"
                 android:textSize="20sp" />
 
-            <LinearLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="12dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:id="@+id/origin_city"
+                app:helperText="Required *"
+                app:helperTextEnabled="true">
 
-                <TextView
-                    android:id="@+id/origincity"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Origin City"
-                    android:textColor="#000000"
-                    android:textSize="18sp" />
-
-                <EditText
-                    android:id="@+id/origin_city"
+                <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLines="1" />
-            </LinearLayout>
+                    android:maxLines="1"
+                    android:hint="Origin City"
+                    android:inputType="textCapWords" />
 
-            <LinearLayout
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                app:helperText="Required *"
+                app:helperTextEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:id="@+id/Edit_airline1"
 
-                <TextView
-                    android:id="@+id/airlinename"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Airline Name "
-                    android:textColor="#000000"
-                    android:textSize="18sp" />
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="12dp">
 
-                <EditText
-                    android:id="@+id/Edit_airline1"
+                <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLines="2" />
-            </LinearLayout>
+                    android:maxLines="2"
+                    android:hint="Airline Name"
+                    android:inputType="textCapWords" />
 
-            <LinearLayout
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:id="@+id/edit_flightno1"
 
-                <TextView
-                    android:id="@+id/flightno1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Flight No"
-                    android:textColor="#000000"
-                    android:textSize="18sp" />
+                app:helperText="Required *"
+                app:helperTextEnabled="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="12dp">
 
-                <EditText
-                    android:id="@+id/edit_flightno1"
+                <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLines="1" />
-            </LinearLayout>
+                    android:hint="Flight No"
+                    android:maxLines="1"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="12dp"
                 android:orientation="horizontal">
 
-                <LinearLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:layout_height="match_parent"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:id="@+id/arrival_date"
 
-                    <TextView
-                        android:id="@+id/arrivaldate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Arrival date "
-                        android:textColor="#000000"
-                        android:textSize="18sp" />
+                    app:helperText="Required *"
+                    app:helperTextEnabled="true"
+                    android:layout_weight="4">
 
-                    <EditText
-                        android:id="@+id/arrival_date"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:hint="Arrival Rate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:maxLines="1" />
-                </LinearLayout>
+                        android:maxLines="1"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
 
 
-                <LinearLayout
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:id="@+id/PNR_code1"
+                    app:helperText="Required *"
+                    app:helperTextEnabled="true"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4">
 
-                    <TextView
-                        android:id="@+id/PNR1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="PNR "
-                        android:textColor="#000000"
-                        android:textSize="18sp" />
-
-                    <EditText
-                        android:id="@+id/PNR_code1"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:hint="PNR"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:maxLines="1" />
-                </LinearLayout>
+                        android:maxLines="1"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
             </LinearLayout>
 
+        </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -166,117 +177,125 @@
                     android:textColor="@color/RedColor"
                     android:textSize="20sp" />
 
-                <LinearLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:id="@+id/Destination_city"
+                    android:layout_marginRight="12dp"
+                    app:helperText="Required *"
+                    app:helperTextEnabled="true">
 
-
-                    <TextView
-                        android:id="@+id/destinationcity"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Destination City "
-                        android:textColor="#000000"
-                        android:textSize="18sp" />
-
-
-                    <EditText
-                        android:id="@+id/Destination_city"
+                    <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-
-                    <TextView
-                        android:id="@+id/airlinename2"
-                        android:layout_width="wrap_content"
+                        android:hint="Destination City"
                         android:layout_height="wrap_content"
-                        android:text="Airline Name "
-                        android:textColor="#000000"
-                        android:textSize="18sp" />
+                        android:maxLines="1"
+                        android:inputType="textCapWords" />
 
+                </com.google.android.material.textfield.TextInputLayout>
 
-                    <EditText
-                        android:id="@+id/Edit_airline2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-
-                <LinearLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:id="@+id/Edit_airline2"
 
+                    app:helperText="Required *"
+                    app:helperTextEnabled="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="12dp">
 
-                    <TextView
-                        android:id="@+id/flightno2"
-                        android:layout_width="wrap_content"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Flight No"
-                        android:textColor="#000000"
-                        android:textSize="18sp" />
+                        android:maxLines="2"
+                        android:hint="Airline Name"
+                        android:inputType="textCapWords" />
 
+                </com.google.android.material.textfield.TextInputLayout>
 
-                    <EditText
-                        android:id="@+id/edit_flightno2"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:id="@+id/edit_flightno2"
+
+                    app:helperText="Required *"
+                    app:helperTextEnabled="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="12dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:hint="Flight No"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="9"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="12dp"
+
+                    app:helperText="Required *"
+                    app:helperTextEnabled="true"
                     android:orientation="horizontal">
 
-                    <LinearLayout
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:id="@+id/Departure_date"
+                        app:helperText="Required *"
+                        app:helperTextEnabled="true"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4">
 
-                        <TextView
-                            android:id="@+id/departuredate"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Departure Date "
-                            android:textColor="#000000"
-                            android:textSize="18sp" />
-
-                        <EditText
-                            android:id="@+id/Departure_date"
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:hint="Departure Date"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-                    </LinearLayout>
+                            android:layout_height="wrap_content"
+                            android:maxLines="1" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
 
 
-                    <LinearLayout
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:layout_height="match_parent"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:id="@+id/PNR_code2"
 
-                        <TextView
-                            android:id="@+id/PNR2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="PNR "
-                            android:textColor="#000000"
-                            android:textSize="18sp" />
+                        app:helperText="Required *"
+                        app:helperTextEnabled="true"
+                        android:layout_weight="4">
 
-
-                        <EditText
-                            android:id="@+id/PNR_code2"
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:hint="PNR"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-                    </LinearLayout>
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
                 </LinearLayout>
-            </LinearLayout>
+
 
             <Button
                 android:id="@+id/Proceed_Button"

@@ -109,4 +109,11 @@
         <item>Mrs.</item>
 
     </string-array>
+
+    <string-array name="gender">
+        <item>-Choose-</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>others</item>
+    </string-array>
 </resources>
