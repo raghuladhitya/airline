@@ -231,12 +231,14 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/rb1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Decided"
                     android:textColor="@color/WhiteColor"/>
 
                 <RadioButton
+                    android:id="@+id/rb2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Not Decided"
@@ -249,7 +251,7 @@
             android:id="@+id/Proceed_Button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="end|bottom"
+            android:layout_gravity="center|bottom"
             android:text=" Next " />
     </LinearLayout>
 </ScrollView>

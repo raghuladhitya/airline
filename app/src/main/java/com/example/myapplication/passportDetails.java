@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.Html;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +23,8 @@ import com.google.android.material.textfield.TextInputLayout;
 public class passportDetails extends Fragment {
     View mView;
     Button button;
-    private String c1,s1,ci1,l1,l2,pinCode,Mobileno,Email1;
+    private int c1,s1,ci1;
+    private String l1,l2,pinCode,Mobileno,Email1;
     private TextView c,s,ci;
     private Bundle bundle;
     private Spinner country,state,city;
@@ -42,13 +44,13 @@ public class passportDetails extends Fragment {
 
         String star = getColoredSpanned(" *", "#FF0000");
 
-        c.setText(Html.fromHtml(getColoredSpanned(c.getText().toString().trim(), "#000000") + " " + star));
-        s.setText(Html.fromHtml(getColoredSpanned(s.getText().toString().trim(), "#000000") + " " + star));
-        ci.setText(Html.fromHtml(getColoredSpanned(ci.getText().toString().trim(), "#000000") + " " + star));
-
         c = mView.findViewById(R.id.Country);
         s = mView.findViewById(R.id.State);
         ci = mView.findViewById(R.id.City);
+
+        c.setText(Html.fromHtml(getColoredSpanned(c.getText().toString().trim(), "#000000") + " " + star));
+        s.setText(Html.fromHtml(getColoredSpanned(s.getText().toString().trim(), "#000000") + " " + star));
+        ci.setText(Html.fromHtml(getColoredSpanned(ci.getText().toString().trim(), "#000000") + " " + star));
 
         bundle = getArguments();
 
@@ -77,35 +79,30 @@ public class passportDetails extends Fragment {
         state.setAdapter(state1);
         country.setAdapter(country1);
 
-        l1 = line1.getEditText().getText().toString().trim();
-        l2 = line2.getEditText().getText().toString().trim();
-        pinCode = pincode.getEditText().getText().toString().trim();
-        Mobileno = mobileno.getEditText().getText().toString().trim();
-        Email1 = email.getEditText().getText().toString().trim();
-
-        c1 = city.getSelectedItem().toString();
-        s1 = state.getSelectedItem().toString();
-        ci1 = country.getSelectedItem().toString();
+        c1 = city.getSelectedItemPosition();
+        s1 = state.getSelectedItemPosition();
+        ci1 = country.getSelectedItemPosition();
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!c1.contentEquals("-Select-") && !s1.contentEquals("-Select-") &&
-                        !ci1.contentEquals("-Select-") && !l1.isEmpty() && !l2.isEmpty() &&
-                        !pinCode.isEmpty() && !Mobileno.isEmpty() && !Email1.isEmpty()){
-                    bundle.putString("City",ci1);
-                    bundle.putString("Country",c1);
-                    bundle.putString("State",s1);
-                    bundle.putString("line1",l1);
-                    bundle.putString("line2",l2);
-                    bundle.putString("pincode",pinCode);
-                    bundle.putString("mobileNo",Mobileno);
-                    bundle.putString("Email",Email1);
+              /*  if(c1 != 1 && s1 != 1 &&
+                        ci1 != 1 && !l1.isEmpty() && !l2.isEmpty() &&
+                        !pinCode.isEmpty() && !Mobileno.isEmpty() && !Email1.isEmpty()){*/
+                    bundle.putString("City",city.getSelectedItem().toString());
+                    bundle.putString("Country",country.getSelectedItem().toString());
+                    bundle.putString("State",state.getSelectedItem().toString());
+                    bundle.putString("line1",line1.getEditText().getText().toString().trim());
+                    bundle.putString("line2", line2.getEditText().getText().toString().trim());
+                    bundle.putString("pincode", pincode.getEditText().getText().toString().trim());
+                    bundle.putString("mobileNo",mobileno.getEditText().getText().toString().trim());
+                    bundle.putString("Email",email.getEditText().getText().toString().trim());
 
-                    Intent i = new Intent(getContext(),DisplayActivity.class);
+                    Intent i = new Intent(getActivity(),DisplayActivity.class);
                     i.putExtras(bundle);
+                    Log.v("Hel2",bundle + "");
                     startActivity(i);
-                }
+
             }
         });
 

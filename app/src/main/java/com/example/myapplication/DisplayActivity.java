@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 public class DisplayActivity extends AppCompatActivity {
@@ -18,7 +19,7 @@ public class DisplayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_display);
 
         i = getIntent();
-        bundle = getIntent().getExtras();
+        bundle = i.getExtras();
         t1 = findViewById(R.id.T1);
         t2 = findViewById(R.id.T2);
         t3 = findViewById(R.id.T3);
@@ -44,9 +45,6 @@ public class DisplayActivity extends AppCompatActivity {
         t23 = findViewById(R.id.T23);
         t24 = findViewById(R.id.T24);
         t25 = findViewById(R.id.T25);
-        t26 = findViewById(R.id.T26);
-
-
 
         t1.setText(bundle.getString("visacategory"));
         t2.setText(bundle.getString("country"));
@@ -55,9 +53,9 @@ public class DisplayActivity extends AppCompatActivity {
         t5.setText(bundle.getString("purposeofvisit"));
         t6.setText(bundle.getString("nationality"));
         t7.setText(bundle.getString("noofapplicants"));
-        int reference = bundle.getInt("reference");
+        String ref = bundle.getString("reference");
 
-        if(reference == 1){
+        if(ref.equals("1")) {
 
             t8.setText(bundle.getString("origincity"));
             t9.setText(bundle.getString("airlineName1"));
@@ -68,7 +66,6 @@ public class DisplayActivity extends AppCompatActivity {
             t14.setText(bundle.getString("airlineName2"));
             t15.setText(bundle.getString("flightNo2"));
             t16.setText(bundle.getString("departuredate"));
-            t17.setText(bundle.getString("pnr2"));
 
             t18.setText(bundle.getString("City"));
             t19.setText(bundle.getString("Country"));
@@ -77,9 +74,9 @@ public class DisplayActivity extends AppCompatActivity {
             t22.setText(bundle.getString("line2"));
             t23.setText(bundle.getString("pincode"));
             t24.setText(bundle.getString("mobileNo"));
-            t25.setText(bundle.getString("Email"));
+            t17.setText(bundle.getString("pnr2"));
 
-        }else if(reference == 2){
+        }else if(ref.equals("2")) {
 
             t18.setText(bundle.getString("City"));
             t19.setText(bundle.getString("Country"));
@@ -91,6 +88,5 @@ public class DisplayActivity extends AppCompatActivity {
             t25.setText(bundle.getString("Email"));
 
         }
-
     }
 }

@@ -19,10 +19,11 @@ import android.widget.TextView;
 
 public class GeneralInformation extends Fragment {
     View mView;
+    int rid;
     Bundle bundle;
     private Button button;
     private RadioGroup rg;
-    private String Visatype, Country, Visacategory, Purposeofvisit, Processpriority, Nationality, Noofapplications;
+    private int Visatype, Country, Visacategory, Purposeofvisit, Processpriority, Nationality, Noofapplications;
     private TextView visaType, country, visaCategory, purposeOfVisit, processPriority, nationality, noOfApplicants;
     private Spinner visaTypeET, countryET, visaCategoryET, purposeOfVisitET, processPriorityET, nationalityET, noOfApplicantsET;
 
@@ -87,60 +88,63 @@ public class GeneralInformation extends Fragment {
         processPriorityET.setAdapter(process);
 
 
-        Visatype = visaCategoryET.getSelectedItem().toString();
-        Country = countryET.getSelectedItem().toString();
-        Visacategory = visaCategoryET.getSelectedItem().toString();
-        Purposeofvisit = purposeOfVisitET.getSelectedItem().toString();
-        Processpriority = processPriorityET.getSelectedItem().toString();
-        Nationality = nationalityET.getSelectedItem().toString();
-        Noofapplications = noOfApplicantsET.getSelectedItem().toString();
+        Visatype = visaCategoryET.getSelectedItemPosition();
+        Country = countryET.getSelectedItemPosition();
+        Visacategory = visaCategoryET.getSelectedItemPosition();
+        Purposeofvisit = purposeOfVisitET.getSelectedItemPosition();
+        Processpriority = processPriorityET.getSelectedItemPosition();
+        Nationality = nationalityET.getSelectedItemPosition();
+        Noofapplications = noOfApplicantsET.getSelectedItemPosition();
 
-
+        rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                // checkedId is the RadioButton selected
+                        rid = checkedId;
+            }
+        });
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Get the checked Radio Button ID from Radio Grou[
-                int selectedRadioButtonID = rg.getCheckedRadioButtonId();
+                if (rid == R.id.rb1) {
 
-                // If nothing is selected from Radio Group, then it return -1
-                if (selectedRadioButtonID == 1) {
-                    if (!Visatype.contentEquals("-Select-") && !Country.contentEquals("-Select-") &&
-                            !Visacategory.contentEquals("-Select-") && !Processpriority.contentEquals("-Select-") &&
-                            !Purposeofvisit.contentEquals("-Select-") && Nationality.contentEquals("-Select-") &&
-                            !Noofapplications.contentEquals("-Select-")) {
-                        bundle.putInt("reference",1);
-                        bundle.putString("visacategory",Visacategory);
-                        bundle.putString("country",Country);
-                        bundle.putString("visatype",Visatype);
-                        bundle.putString("processpriority",Processpriority);
-                        bundle.putString("purposeofvisit",Purposeofvisit);
-                        bundle.putString("nationality",Nationality);
-                        bundle.putString("noofapplicants",Noofapplications);
-                        bundle.putString("noofapplicants",Noofapplications);
+                    if (Visatype != 1 && Country != 1 &&
+                            Visacategory != 1 && Processpriority != 1 &&
+                            Purposeofvisit != 1 && Nationality != 1 &&
+                            Noofapplications != 1) {
+
+                        bundle.putString("reference","1");
+                        bundle.putString("visacategory", visaCategoryET.getSelectedItem().toString().trim());
+                        bundle.putString("country", countryET.getSelectedItem().toString().trim());
+                        bundle.putString("visatype", visaTypeET.getSelectedItem().toString().trim());
+                        bundle.putString("processpriority", processPriorityET.getSelectedItem().toString().trim());
+                        bundle.putString("purposeofvisit", purposeOfVisitET.getSelectedItem().toString().trim());
+                        bundle.putString("nationality", nationalityET.getSelectedItem().toString().trim());
+                        bundle.putString("noofapplicants", noOfApplicantsET.getSelectedItem().toString().trim());
                         traveldetails td = new traveldetails();
                         td.setArguments(bundle);
-                        getFragmentManager().beginTransaction().replace(R.id.Fragment_container,td).addToBackStack(null).commit();
+                        getFragmentManager().beginTransaction().replace(R.id.Fragment_container, td).addToBackStack(null).commit();
                     }
-                } else if (selectedRadioButtonID == 2) {
-                    if (!Visatype.contentEquals("-Select-") && !Country.contentEquals("-Select-") &&
-                            !Visacategory.contentEquals("-Select-") && !Processpriority.contentEquals("-Select-") &&
-                            !Purposeofvisit.contentEquals("-Select-") && Nationality.contentEquals("-Select-") &&
-                            !Noofapplications.contentEquals("-Select-")) {
-                        bundle.putInt("reference",2);
-                        bundle.putString("visacategory",Visacategory);
-                        bundle.putString("country",Country);
-                        bundle.putString("visatype",Visatype);
-                        bundle.putString("processpriority",Processpriority);
-                        bundle.putString("purposeofvisit",Purposeofvisit);
-                        bundle.putString("nationality",Nationality);
-                        bundle.putString("noofapplicants",Noofapplications);
+                } else if (rid == R.id.rb2) {
+
+                    if (Visatype != 1 && Country != 1 &&
+                            Visacategory != 1 && Processpriority != 1 &&
+                            Purposeofvisit != 1 && Nationality != 1 &&
+                            Noofapplications != 1) {
+
+                        bundle.putString("reference","2");
+                        bundle.putString("visacategory", visaCategoryET.getSelectedItem().toString().trim());
+                        bundle.putString("country", countryET.getSelectedItem().toString().trim());
+                        bundle.putString("visatype", visaTypeET.getSelectedItem().toString().trim());
+                        bundle.putString("processpriority", processPriorityET.getSelectedItem().toString().trim());
+                        bundle.putString("purposeofvisit", purposeOfVisitET.getSelectedItem().toString().trim());
+                        bundle.putString("nationality", nationalityET.getSelectedItem().toString().trim());
+                        bundle.putString("noofapplicants", noOfApplicantsET.getSelectedItem().toString().trim());
                         passportDetails pd = new passportDetails();
                         pd.setArguments(bundle);
-                        getFragmentManager().beginTransaction().replace(R.id.Fragment_container,pd).addToBackStack(null).commit();
-                        //  tv_result.setText("Nothing selected from Radio Group.");
+                        Log.v("Hell11",bundle + "");
+                        getFragmentManager().beginTransaction().replace(R.id.Fragment_container, pd).addToBackStack(null).commit();
                     }
                 }
-                Log.v("hi", selectedRadioButtonID + " ");
             }
         });
     }
@@ -148,5 +152,10 @@ public class GeneralInformation extends Fragment {
     private String getColoredSpanned(String text, String color) {
         String input = "<font color=" + color + ">" + text + "</font>";
         return input;
+
     }
+
+    //  tv_result.setText("Nothing selected from Radio Group.");
 }
+
+
