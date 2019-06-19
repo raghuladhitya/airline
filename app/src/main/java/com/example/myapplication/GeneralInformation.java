@@ -108,12 +108,14 @@ public class GeneralInformation extends Fragment {
                             !Visacategory.contentEquals("-Select-") && !Processpriority.contentEquals("-Select-") &&
                             !Purposeofvisit.contentEquals("-Select-") && Nationality.contentEquals("-Select-") &&
                             !Noofapplications.contentEquals("-Select-")) {
+                        bundle.putInt("reference",1);
                         bundle.putString("visacategory",Visacategory);
                         bundle.putString("country",Country);
                         bundle.putString("visatype",Visatype);
                         bundle.putString("processpriority",Processpriority);
                         bundle.putString("purposeofvisit",Purposeofvisit);
                         bundle.putString("nationality",Nationality);
+                        bundle.putString("noofapplicants",Noofapplications);
                         bundle.putString("noofapplicants",Noofapplications);
                         traveldetails td = new traveldetails();
                         td.setArguments(bundle);
@@ -124,6 +126,7 @@ public class GeneralInformation extends Fragment {
                             !Visacategory.contentEquals("-Select-") && !Processpriority.contentEquals("-Select-") &&
                             !Purposeofvisit.contentEquals("-Select-") && Nationality.contentEquals("-Select-") &&
                             !Noofapplications.contentEquals("-Select-")) {
+                        bundle.putInt("reference",2);
                         bundle.putString("visacategory",Visacategory);
                         bundle.putString("country",Country);
                         bundle.putString("visatype",Visatype);

@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.Html;
@@ -7,6 +8,7 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -22,6 +24,7 @@ public class passportDetails extends Fragment {
     Button button;
     private String c1,s1,ci1,l1,l2,pinCode,Mobileno,Email1;
     private TextView c,s,ci;
+    private Bundle bundle;
     private Spinner country,state,city;
     private TextInputLayout line1,line2,pincode,mobileno,email;
     @Nullable
@@ -47,6 +50,7 @@ public class passportDetails extends Fragment {
         s = mView.findViewById(R.id.State);
         ci = mView.findViewById(R.id.City);
 
+        bundle = getArguments();
 
         button = mView.findViewById(R.id.Finished);
         line1=  mView.findViewById(R.id.line_1);
@@ -65,6 +69,14 @@ public class passportDetails extends Fragment {
         state = mView.findViewById(R.id.StateET);
         country = mView.findViewById(R.id.CountryET);
 
+        ArrayAdapter<CharSequence> city1= ArrayAdapter.createFromResource(this.getActivity(), R.array.VisaCategory, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> state1= ArrayAdapter.createFromResource(this.getActivity(), R.array.VisaType, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> country1 = ArrayAdapter.createFromResource(this.getActivity(), R.array.Country1, android.R.layout.simple_spinner_item);
+
+        city.setAdapter(city1);
+        state.setAdapter(state1);
+        country.setAdapter(country1);
+
         l1 = line1.getEditText().getText().toString().trim();
         l2 = line2.getEditText().getText().toString().trim();
         pinCode = pincode.getEditText().getText().toString().trim();
@@ -81,7 +93,18 @@ public class passportDetails extends Fragment {
                 if(!c1.contentEquals("-Select-") && !s1.contentEquals("-Select-") &&
                         !ci1.contentEquals("-Select-") && !l1.isEmpty() && !l2.isEmpty() &&
                         !pinCode.isEmpty() && !Mobileno.isEmpty() && !Email1.isEmpty()){
+                    bundle.putString("City",ci1);
+                    bundle.putString("Country",c1);
+                    bundle.putString("State",s1);
+                    bundle.putString("line1",l1);
+                    bundle.putString("line2",l2);
+                    bundle.putString("pincode",pinCode);
+                    bundle.putString("mobileNo",Mobileno);
+                    bundle.putString("Email",Email1);
 
+                    Intent i = new Intent(getContext(),DisplayActivity.class);
+                    i.putExtras(bundle);
+                    startActivity(i);
                 }
             }
         });

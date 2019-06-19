@@ -19,6 +19,8 @@ public class traveldetails extends Fragment {
     private TextInputLayout OriginCity, AirlineName1, FlightNo1, ArrDate, PNR1;
     private TextInputLayout DestinationCity, AirlineName2, FlightNo2, DepartureDate, PNR2;
 
+    private Bundle bundle;
+
     String origincity, airlineName1, flightNo1, arrDate, pnr1;
     String destinationcity, airlineName2, flightNo2, departuredate, pnr2;
     private Button button;
@@ -35,6 +37,8 @@ public class traveldetails extends Fragment {
         this.mView = view;
         button = (Button) mView.findViewById(R.id.Proceed_Button);
 
+
+        bundle = getArguments();
         OriginCity =  mView.findViewById(R.id.origin_city);
         AirlineName1 =  mView.findViewById(R.id.Edit_airline1);
         FlightNo1 =  mView.findViewById(R.id.edit_flightno1);
@@ -47,18 +51,10 @@ public class traveldetails extends Fragment {
         DepartureDate =  mView.findViewById(R.id.Departure_date);
         PNR2 = mView.findViewById(R.id.PNR_code2);
 /*
-        origincity = OriginCity.getEditText().toString().trim();
-        airlineName1 = AirlineName1.getEditText().toString().trim();
-        flightNo1 = FlightNo1.getEditText().toString().trim();
-        arrDate = ArrDate.getEditText().toString().trim();
-        pnr1 = PNR1.getEditText().toString().trim();
 
-        destinationcity = DestinationCity.getEditText().toString().trim();
-        airlineName2 = AirlineName2.getEditText().toString().trim();
-        flightNo2 = FlightNo2.getEditText().toString().trim();
-        departuredate = DepartureDate.getEditText().toString().trim();
-        pnr2 = PNR2.getEditText().toString().trim();
 */
+
+
 
         OriginCity.getEditText().addTextChangedListener(new CustomTextWatcher(OriginCity));
         AirlineName1.getEditText().addTextChangedListener(new CustomTextWatcher(AirlineName1));
@@ -72,6 +68,7 @@ public class traveldetails extends Fragment {
         DepartureDate.getEditText().addTextChangedListener(new CustomTextWatcher(DepartureDate));
         PNR2.getEditText().addTextChangedListener(new CustomTextWatcher(PNR2));
 
+        bundle = getArguments();
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,7 +77,36 @@ public class traveldetails extends Fragment {
                         && !PNR1.getEditText().getText().toString().isEmpty() && !DestinationCity.getEditText().getText().toString().isEmpty()
                         && !AirlineName2.getEditText().getText().toString().isEmpty() && !FlightNo2.getEditText().getText().toString().isEmpty()
                         && !DepartureDate.getEditText().getText().toString().isEmpty() && !PNR2.getEditText().getText().toString().isEmpty()) {
-                    getFragmentManager().beginTransaction().replace(R.id.Fragment_container, new uploadDocuments()).addToBackStack(null).commit();
+
+                    origincity = OriginCity.getEditText().toString().trim();
+                    airlineName1 = AirlineName1.getEditText().toString().trim();
+                    flightNo1 = FlightNo1.getEditText().toString().trim();
+                    arrDate = ArrDate.getEditText().toString().trim();
+                    pnr1 = PNR1.getEditText().toString().trim();
+
+
+                    destinationcity = DestinationCity.getEditText().toString().trim();
+                    airlineName2 = AirlineName2.getEditText().toString().trim();
+                    flightNo2 = FlightNo2.getEditText().toString().trim();
+                    departuredate = DepartureDate.getEditText().toString().trim();
+                    pnr2 = PNR2.getEditText().toString().trim();
+
+                    bundle.putString("origincity",origincity);
+                    bundle.putString("airlineName1",airlineName1);
+                    bundle.putString("flightNo1",flightNo1);
+                    bundle.putString("arrDate",arrDate);
+                    bundle.putString("pnr1",pnr1);
+                    bundle.putString("destinationcity",destinationcity);
+                    bundle.putString("airlineName2",airlineName2);
+                    bundle.putString("flightNo2",flightNo2);
+                    bundle.putString("departuredate",departuredate);
+                    bundle.putString("pnr2",pnr2);
+
+                    passportDetails pd = new passportDetails();
+
+                    pd.setArguments(bundle);
+
+                    getFragmentManager().beginTransaction().replace(R.id.Fragment_container,pd).addToBackStack(null).commit();
                 }
             }
         });
