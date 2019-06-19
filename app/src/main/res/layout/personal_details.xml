@@ -404,10 +404,14 @@
                     android:hint="PAN Card No"
                     android:inputType="textCapWords" />
             </com.google.android.material.textfield.TextInputLayout>
-
         </LinearLayout>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:id="@+id/next"
+            android:gravity="center|bottom"/>
 
     </LinearLayout>
-
 </ScrollView>

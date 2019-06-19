@@ -104,7 +104,7 @@ public class traveldetails extends Fragment {
                     bundle.putString("departuredate",departuredate);
                     bundle.putString("pnr2",pnr2);
 
-                    passportDetails pd = new passportDetails();
+                    personalDetails pd = new personalDetails();
                     pd.setArguments(bundle);
 
                     Log.v("Hel1",bundle + "");

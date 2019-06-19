@@ -102,7 +102,6 @@ public class passportDetails extends Fragment {
                     i.putExtras(bundle);
                     Log.v("Hel2",bundle + "");
                     startActivity(i);
-
             }
         });
 

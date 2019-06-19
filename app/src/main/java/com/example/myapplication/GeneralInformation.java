@@ -139,7 +139,7 @@ public class GeneralInformation extends Fragment {
                         bundle.putString("purposeofvisit", purposeOfVisitET.getSelectedItem().toString().trim());
                         bundle.putString("nationality", nationalityET.getSelectedItem().toString().trim());
                         bundle.putString("noofapplicants", noOfApplicantsET.getSelectedItem().toString().trim());
-                        passportDetails pd = new passportDetails();
+                        personalDetails pd = new personalDetails();
                         pd.setArguments(bundle);
                         Log.v("Hell11",bundle + "");
                         getFragmentManager().beginTransaction().replace(R.id.Fragment_container, pd).addToBackStack(null).commit();

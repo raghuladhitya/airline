@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import com.google.android.material.textfield.TextInputLayout;
@@ -18,6 +19,8 @@ import com.google.android.material.textfield.TextInputLayout;
 public class personalDetails extends Fragment {
     View mView;
     private Spinner gender;
+    private Button button;
+    private Bundle bundle;
     private TextInputLayout title,firstName,middleName,lastName,dateofBirth,countryofBirth,cityofBirth;
     private TextInputLayout martialStatus,profession_Or_Designation,religion,educationalQualification;
     private TextInputLayout userrefNo,nationality,prenationalityifAny,pancardNo;
@@ -33,6 +36,9 @@ public class personalDetails extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         this.mView = view;
 
+        button = mView.findViewById(R.id.next);
+
+        bundle = getArguments();
         title = mView.findViewById(R.id.title);
         firstName = mView.findViewById(R.id.FirstName);
         middleName = mView.findViewById(R.id.MiddleName);
@@ -73,7 +79,34 @@ public class personalDetails extends Fragment {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         gender.setAdapter(adapter);
 
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                bundle.putString("title",title.getEditText().getText().toString().trim());
+                bundle.putString("firstName",firstName.getEditText().getText().toString().trim());
+                bundle.putString("middleName",middleName.getEditText().getText().toString().trim());
+                bundle.putString("lastName",lastName.getEditText().getText().toString().trim());
+                bundle.putString("dateofBirth",dateofBirth.getEditText().getText().toString().trim());
+
+                bundle.putString("countryofBirth",countryofBirth.getEditText().getText().toString().trim());
+                bundle.putString("cityofBirth",cityofBirth.getEditText().getText().toString().trim());
+                bundle.putString("martialStatus",martialStatus.getEditText().getText().toString().trim());
+                bundle.putString("profession_Or_Designation",profession_Or_Designation.getEditText().getText().toString().trim());
+                bundle.putString("religion",religion.getEditText().getText().toString().trim());
+
+                bundle.putString("educationalQualification",educationalQualification.getEditText().getText().toString().trim());
+                bundle.putString("userrefNo",userrefNo.getEditText().getText().toString().trim());
+                bundle.putString("nationality",nationality.getEditText().getText().toString().trim());
+                bundle.putString("prenationalityifAny",prenationalityifAny.getEditText().getText().toString().trim());
+                bundle.putString("pancardNo",pancardNo.getEditText().getText().toString().trim());
+
+                passportDetails pd = new passportDetails();
+                pd.setArguments(bundle);
+                getFragmentManager().beginTransaction().replace(R.id.Fragment_container,pd).addToBackStack(null).commit();
+
+            }
+        });
     }
     private class CustomTextWatcher implements TextWatcher {
         private TextInputLayout mEditText;
